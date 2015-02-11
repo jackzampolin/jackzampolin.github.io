@@ -1,30 +1,76 @@
-body {
-  font-family: Avenir;
-  width: 100%;
-  margin: auto;
-}
+/* Classes */
 
 .container {
-  width: 90%;
+  width: 925px;
+  margin-top: -50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-container {
+  width: 300px;
+  height: 25px;
+  position: relative;
+  top: 0px;
   margin: 0 auto;
-  margin-right: 5%;
-  margin-left: 5%;
 }
 
 .header {
-  background: white;
-  width: 50%;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
   top: 0px;
   position: fixed;
-  margin-left: 25%;
-  margin-right: 25%;
   opacity: .5;
-  display: block;
 }
 
-ul {
-  margin-left: 25%;
-  margin-right: 25%;
+.content {
+  width: 700px;
+  margin: 50px auto;
+  padding-bottom: 100px;
+}
+
+.img {
+  padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.footer-container {
+  width: 400px;
+  height: 25px;
+  position: relative;
+  bottom: 25px;
+  margin: 0 auto;
+}
+
+.footer {
+  width: 400px;
+  height: 25px;
+  position: fixed;
+  bottom: 60px;
+  margin: 0 auto;
+}
+
+/* IDs */
+
+#floating-social-icons {
+  list-style-type: none;
+  padding: 10px;
+}
+
+#floating-social-icons li a {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* Tags */
+
+body {
+  font-family: Avenir;
+  width: 100%;
 }
 
 a:link {
@@ -46,22 +92,7 @@ li {
   font-size: 20px;
   list-style: none;
   float: left;
-  margin-left: 15px;
-}
-
-.content {
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-top: 50px;
-  padding-bottom: 100px;
-}
-
-.img {
-  margin-top: 40px;
-  margin-left:40%;
-  margin-right: 40%;
-  width: 20%;
-  height: 50%;
+  padding-left: 5%;
 }
 
 img {
@@ -71,22 +102,7 @@ img {
   height: auto;
 }
 
-.footer {
-  position: fixed;
-  width: 60%;
-  margin-right: 20%;
-  margin-left: 20%;
-  bottom: 10px;
-}
-
-#floating-social-icons {
-  list-style-type: none;
-  padding: 10px;
-
-}
-
-#floating-social-icons li a {
-  display: block;
-  background-repeat: no-repeat;
-  background-position: bottom;
+h1 {
+text-align: center;
+font-size: 50px;
 }
