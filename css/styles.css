@@ -1,27 +1,16 @@
 /* Classes */
 
+
+.body-copy {
+  line-height: 150%;
+  font-size: 18px;
+}
+
 .container {
   width: 925px;
   margin-top: -50px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.header-container {
-  width: 300px;
-  height: 25px;
-  position: relative;
-  top: 0px;
-  margin: 0 auto;
-}
-
-.header {
-  width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  top: 0px;
-  position: fixed;
-  opacity: .5;
 }
 
 .content {
@@ -37,7 +26,26 @@
   position: relative;
 }
 
-.footer-container {
+/* IDs */
+
+#header-container {
+  width: 300px;
+  height: 25px;
+  position: relative;
+  top: 0px;
+  margin: 0 auto;
+}
+
+#header {
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  position: fixed;
+  opacity: .5;
+}
+
+#footer-container {
   width: 400px;
   height: 25px;
   position: relative;
@@ -45,20 +53,13 @@
   margin: 0 auto;
 }
 
-.footer {
+#footer {
   width: 400px;
   height: 25px;
   position: fixed;
   bottom: 60px;
   margin: 0 auto;
 }
-
-.body-copy {
-  line-height: 150%;
-  font-size: 18px;
-}
-
-/* IDs */
 
 #floating-social-icons {
   list-style-type: none;
