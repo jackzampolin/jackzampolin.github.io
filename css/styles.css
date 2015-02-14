@@ -53,6 +53,11 @@
   margin: 0 auto;
 }
 
+.body-copy {
+  line-height: 150%;
+  font-size: 18px;
+}
+
 /* IDs */
 
 #floating-social-icons {
@@ -64,11 +69,6 @@
   display: block;
   background-repeat: no-repeat;
   background-position: bottom;
-}
-
-#body-copy {
-  line-height: 150%;
-  font-size: 18px;
 }
 
 /* Tags */
