@@ -66,6 +66,11 @@
   background-position: bottom;
 }
 
+#body-copy {
+  line-height: 150%;
+  font-size: 18px;
+}
+
 /* Tags */
 
 body {
