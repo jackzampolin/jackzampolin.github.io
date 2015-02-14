@@ -1,0 +1,64 @@
+<!Doctype HTML>
+
+<head>
+  <title>IDs vs. Classes in CSS</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+</head>
+<body>
+  <div id='header-container'>
+    <div id='header'>
+      <ul>
+          <li><a href="../../blog.html">Blog</a></li>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../portfolio.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class='container'>
+    <div class='content'>
+      <div class='img'>
+        <a href='../technical-blog.html'><img src="../../assets/inuse/id-v-class.png"></a>
+      </div>
+
+      <p><h1 style='margin-bottom:-25px;'>Classes and IDs in CSS and HTML</h1><br><h3 style='margin-bottom:-30px;'>The hows and whys</h3><br><h4 style='margin-bottom:10px;'>14 Feb 2015</h4>
+      </p>
+      <p class='body-copy'>CSS is a great way to add some flair to your basic HTML.  There are a number of different ways apply CSS to your site.  The most basic is to add your CSS styles 'inline' in your HTML document.  Inline syntax looks like this:</p>
+      <div class='img' style='margin-top:-20px'>
+        <img src="../../assets/inuse/inline-css.png">
+      </div>
+      <p class='body-copy'>However if you want to separate your CSS off into another document so that you can easily apply your styles multiple times over a number of different pages you are faced with a couple of choices about how you can implement that: classes or IDs.</p>
+
+      <p class='body-copy'>ID names are signified on the stylesheet with a '#'.  They look like this:</p>
+      <div class='img' style='margin-top:-20px'>
+        <img src="../../assets/inuse/css-ids.png">
+      </div>
+      <p class='body-copy'>To link them to the element you want them to style you just add id='class-name' to the element in your HTML you want to modify.  Here is what the header at the top of the page styled with IDs looks like:</p>
+      <div class='img' style='margin-top:-20px'>
+        <img src="../../assets/inuse/html-ids.png">
+      </div>
+      <p class='body-copy'>IDs are unique identifiers and should only be used once per page.  That makes them especially suited to things that only show up once on each page; like a header or footer.  That is the example I use above.</p>
+      <p class='body-copy'>Classes on the other hand can be used multiple times per page.  Class names are written with a '.' on the stylesheet and look like this:</p>
+      <div class='img' style='margin-top:-20px'>
+        <img src="../../assets/inuse/css-classes.png">
+      </div>
+      <p class='body-copy'>Classes are implemented in HTML in a fashion very similar to IDs.  Here is an example of classes being used to style the text and images on this page:</p>
+      <div class='img' style='margin-top:-20px'>
+        <img src="../../assets/inuse/html-classes.png">
+      </div>
+      <p class='body-copy'>To sum up: IDs are unique identifiers to only be used once per page while classes are to style repeating things like images and paragraphs.  Hope this helps!</p>
+    </div>
+  </div>
+  <div id= 'footer-container'>
+    <div id='footer'>
+      <ul id="floating-social-icons">
+        <li><a href="https://github.com/jackzampolin"><img src="../../assets/social/github-icon-01.png" alt="Github"></a></li>
+        <li><a href="https://www.linkedin.com/pub/jack-zampolin/64/b71/b64"><img src="../../assets/social/linkedin-icon-05.png" alt="LinkedIn"></a></li>
+        <li><a href="mailto: jack.zampolin@gmail.com"><img src="../../assets/social/email-icon-02.png" alt="Gmail"> </a></li>
+        <li><a href="https://plus.google.com/+JackZampolin"><img src="../../assets/social/gplus-icon-06.png" alt="Google Plus"></a></li>
+        <li><a href="https://twitter.com/@jack_zampolin"><img src="../../assets/social/twitter-icon-04.png" alt="Twitter"></a></li>
+        <li><a href="https://www.facebook.com/jack.zampolin" rel="external"><img src="../../assets/social/facebook-icon-03.png" alt="Facebook"></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
