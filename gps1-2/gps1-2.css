@@ -1,0 +1,30 @@
+
+body {
+  text-align: center;
+  font-family: Helvetica;
+}
+
+p {
+  text-align: left;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.img-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
