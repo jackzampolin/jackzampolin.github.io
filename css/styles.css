@@ -35,6 +35,30 @@
   position: relative;
 }
 
+.code-snippet {
+  background: #ffffff;
+  overflow: auto;
+  width: auto;
+  border: solid black;
+  border-width:.1em .1em .1em .8em;
+  padding-top:.75em;
+}
+
+.pre-code-snippet {
+  margin: 0;
+  line-height: 125%;
+}
+
+.code-f-1 {
+  margin-left: -2em;
+  color: black;
+  font-weight: bold;
+}
+
+.cod-f-2 {
+  background-color: #fff0f0
+}
+
 /* IDs */
 
 #header-container {

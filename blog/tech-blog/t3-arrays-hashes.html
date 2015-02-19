@@ -1,0 +1,89 @@
+<!Doctype HTML>
+
+<head>
+  <title>Arrays and Hashes in Ruby</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+</head>
+<body>
+  <div id='header-container'>
+    <div id='header'>
+      <ul>
+          <li><a href="../../blog.html">Blog</a></li>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../portfolio.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class='container'>
+    <div class='img-content'>
+      <div class='img'>
+        <a href='../technical-blog.html'><img src="../../assets/inuse/t3-arrays-hashes.png"></a>
+      </div>
+    </div>
+    <div class='content'>
+      <p><h1 style='margin-bottom:-25px;'>Arrays and Hashes in Ruby</h1><br><h3 style='margin-bottom:-30px;'>A brief review</h3><br><h4 style='margin-bottom:10px;'>18 Feb 15</h4>
+      </p>
+      <p class='body-copy'>During week 3 at DBC we went back and looked at basic ruby syntax.  A part of that was looking at hashes and arrays.  Well arrays more than hashes.  These two parts of ruby syntax are commonly used in many different applications.  We will take these two methods of storing data and look at them one by one.
+      </p>
+      <h2>Arrays</h2>
+      <div class='code-snippet'>
+        <pre class='pre-code-snippet'>
+          <span class='code-f-1'>my_empty_array = [] || my_empty_array = Array.new</span>
+          <span class='code-f-1'>foo_array = ['foo','foos','fouie','food','fool',2,2.05 ]</span>
+          <span class='code-f-1'>array_of_arrays = [[2,3,4],['foo','food','foos'],[2.0,3.1,5.6]]</span>
+        </pre>
+      </div>
+      <p class='body-copy'>Above are three arrays.  The first one is an empty array assigned to a variable.  Empty arrays are useful if you plan on adding elements to it later in the program.  For example; if you want to search a string for a particular pattern and push the sentence around what you are looking for to an array, you could start with an empty array.  The second example above shows that you can have many different types of objects contained within a specific instance of an array. This means that you can even nest arrays within arrays as shown in the third example.  This ability allows arrays to be extremely flexible</p>
+      <div class='code-snippet'>
+        <pre class='pre-code-snippet'>
+          <span class='code-f-1'>puts foo_array[0] => 'foo'</span>
+          <span class='code-f-1'>puts foo_array[2] => 'fouie'</span>
+          <span class='code-f-1'>puts foo_array[-1] => 2.05 </span>
+          <span class='code-f-1'>puts array_of_arrays[2][2] => 'food'</span>
+        </pre>
+      </div>
+      <p class='body-copy'>We have seen how to use arrays to store data, but how do we retrieve the data we have stored?  Arrays, like strings, have the first element in the array named <code>[0]</code>, the second <code>[1]</code> and so on.  So if you need the third element out of foo_array you would type <code>foo_array[2]</code> as shown above.  If you need to pull the last element out of an array you <i>could</i> see how long the array is and subtract one to get the index OR you can use <code>[-1]</code> which points to the last element in any array. <code>[-2]</code> would point to the second to last and so on.  This is very useful if you have a constructed array of indeterminate length and need to access the last element.
+      </p>
+      <div class='code-snippet'>
+        <pre class='pre-code-snippet'>
+          <span class='code-f-1'>array_of_arrays.flatten => [2,3,4,'foo','food','foos',2.0,3.1,5.6]</span>
+          <span class='code-f-1'>ruby_array = ['c','e','g','f','b','d','a']</span>
+          <span class='code-f-1'>ruby_array.sort => ['a','b','c','d','e','f','g'] </span>
+          <span class='code-f-1'>ruby_array.length => 7</span>
+          <span class='code-f-1'>[[1.1,2.2,3.3],[1,2,3]].flatten.sort => [1,1.1,2,2.2,3,3.3]</span>
+        </pre>
+      </div>
+      <p class='body-copy'>The above code snippets show a couple of common array method calls and their results.  The <code>.flatten</code> method takes an array of arrays and removes the interior arrays creating a single array.  We applied it to our <code>array_of_arrays</code> from earlier.  <code>.sort</code> takes the elements of the array and sorts them, either in alphabetical order or numerical order from either <code>a..z</code> or <code>1..100</code>. If you need the array reversed you can apply the <code>.reverse</code> method!  Another useful array method is <code>.length</code>.  This method outputs the length of the array in elements as an integer.  As you can see above we have called this method on our <code>ruby_array</code> yielding <code>7</code>.  The final example shows two methods called directly on an array, not just it's variable.  The <code>.sort</code> method allows you to mix floats and integers, but not strings and fixnums.</p>
+      <h2>Hashes</h2>
+      <div class='code-snippet'>
+        <pre class='pre-code-snippet'>
+          <span class='code-f-1'>dbc_hash = Hash.new || dbc_hash = {}</span>
+          <span class='code-f-1'>my_info = {
+            first_name: 'Jack',
+            last_name: 'Zampolin',
+            hometown: 'Richmond',
+            age: 28,
+       }</span>
+          <span class='code-f-1'>puts my_info[:first_name] => 'Jack'</span>
+          <span class='code-f-1'>my_info[:current_town] = 'Bozeman'</span>
+          <span class='code-f-1'>puts my_info[:current_town] => 'Bozeman'</span>
+        </pre>
+      </div>
+      <p class='body-copy'>Above is shown the basic syntax for hashes in ruby.  The first line shows the literal notation for initalizing a new hash.  <code>my_info</code> shows an example hash.  As you can see the individual elements in the hash are key-value pairs.  So the <code>:first_name</code> refers to the value <code>'Jack'</code>.  Data is extracted from hashes by naming the key.  You can see this at work in the 3rd line of the example.  If you want to add a key-value pair to an existing hash the notation is shown in the fourth line.  Hashes, like arrays, have methods to manipulate and view data within them.  Hashes are mainly used in ruby to create and hold classes.  But that topic is slightly beyond the remit of this post, but I have a feeling that we will cover classes in a later post.  Stay tuned.</p>
+    </div>
+  </div>
+  <div id= 'footer-container'>
+    <div id='footer'>
+      <ul id="floating-social-icons">
+        <li><a href="https://github.com/jackzampolin"><img src="../../assets/social/github-icon-01.png" alt="Github"></a></li>
+        <li><a href="https://www.linkedin.com/pub/jack-zampolin/64/b71/b64"><img src="../../assets/social/linkedin-icon-05.png" alt="LinkedIn"></a></li>
+        <li><a href="mailto: jack.zampolin@gmail.com"><img src="../../assets/social/email-icon-02.png" alt="Gmail"> </a></li>
+        <li><a href="https://plus.google.com/+JackZampolin"><img src="../../assets/social/gplus-icon-06.png" alt="Google Plus"></a></li>
+        <li><a href="https://twitter.com/@jack_zampolin"><img src="../../assets/social/twitter-icon-04.png" alt="Twitter"></a></li>
+        <li><a href="https://www.facebook.com/jack.zampolin" rel="external"><img src="../../assets/social/facebook-icon-03.png" alt="Facebook"></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
