@@ -142,6 +142,18 @@ img {
 }
 
 h1 {
-text-align: center;
-font-size: 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+p.body-copy a:link {
+  color: grey;
+}
+
+p.body-copy a:visited {
+  color: black;
+}
+
+p.body-copy a:hover {
+  color: blue;
 }
