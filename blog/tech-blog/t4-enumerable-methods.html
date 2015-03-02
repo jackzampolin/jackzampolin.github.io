@@ -26,7 +26,7 @@
     <div class='content'>
       <p><h1 style='margin-bottom:-25px;'>Enumerable#cycle</h1><br><h3 style='margin-bottom:-30px;'>Enumerators</h3><br><h4 style='margin-bottom:10px;'>27 Feb 15</h4>
       </p>
-      <p class='body-copy'>This week at DBC we continued to dive deeper into ruby and specifically the special methods that allow rubists to write elegant and readable code.  Some of these methods come from the Enumerable module.  Enumerable includes some cool methods like <a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-sort_by"><code>.sort_by</code></a> and <a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-include-3F"><code>.include?</code></a>.  Another great enumerable function is called <a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-cycle"><code>.cycle</code></a></p>
+      <p class='body-copy'>This week at DBC we continued to dive deeper into ruby and specifically the special methods that allow rubists to write elegant and readable code.  Some of these methods come from the Enumerable module.  Enumerable includes some cool methods like <a target="_blank" href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-sort_by"><code>.sort_by</code></a> and <a target="_blank" href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-include-3F"><code>.include?</code></a>.  Another great enumerable function is called <a target="_blank" href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-cycle"><code>.cycle</code></a></p>
       <div class='code-snippet'>
         <pre class='pre-code-snippet'>
           <span class='code-f-1'>a = ["a", "b", "c"]</span>
@@ -48,7 +48,7 @@
           <span class='code-f-1'>b.next => 'a'</span>
         </pre>
       </div>
-      <p class='body-copy'><code>.cycle</code>, among other methods allows you to create an Enumerator object.  The enumerator object <code>b</code> in the example above illustrates that.  <code>b</code> stores the array and a position, initially 0.  You can use the enumerator methods to manipulate the object in a number of ways.  <a href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-next"><code>.next</code></a> returns the next element in the array or hash.  If you want to reset the index to the beginning, utilize the <a href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-rewind"><code>.rewind</code></a> method.</p>
+      <p class='body-copy'><code>.cycle</code>, among other methods allows you to create an Enumerator object.  The enumerator object <code>b</code> in the example above illustrates that.  <code>b</code> stores the array and a position, initially 0.  You can use the enumerator methods to manipulate the object in a number of ways.  <a target="_blank" href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-next"><code>.next</code></a> returns the next element in the array or hash.  If you want to reset the index to the beginning, utilize the <a target="_blank" href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-rewind"><code>.rewind</code></a> method.</p>
       <div class='code-snippet'>
         <pre class='pre-code-snippet'>
           <span class='code-f-1'>b.next_values => ['a']</span>
@@ -59,9 +59,9 @@
           <span class='code-f-1'>b.size => 3</span>
         </pre>
       </div>
-      <p class='body-copy'>Shown above are four enumerator methods: <a href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-next_values"><code>.next_values</code></a>, <a href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-peek"><code>.peek</code></a>, <a href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-peek_values"><code>.peek_values</code></a>, and <a href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-size"><code>.size</code></a>.  <code>.next_values</code> works just like <code>.next</code>, but it returns the value as an array instead.  <code>.peek</code> returns the current value without changing the index.  And, following the pattern, <code>.peek_values</code> returns the value as an array without changing the index.  <code>.size</code> gives the size of the enumerator as an integer.</p>
+      <p class='body-copy'>Shown above are four enumerator methods: <a target="_blank" href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-next_values"><code>.next_values</code></a>, <a target="_blank" href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-peek"><code>.peek</code></a>, <a target="_blank" href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-peek_values"><code>.peek_values</code></a>, and <a target="_blank" href="http://ruby-doc.org//core-2.2.0/Enumerator.html#method-i-size"><code>.size</code></a>.  <code>.next_values</code> works just like <code>.next</code>, but it returns the value as an array instead.  <code>.peek</code> returns the current value without changing the index.  And, following the pattern, <code>.peek_values</code> returns the value as an array without changing the index.  <code>.size</code> gives the size of the enumerator as an integer.</p>
       <p class='body-copy'>Programs can also run enumerable methods on enumerator objects.  Thats a tongue-twister, and slightly beyond my skills at this moment.  <code>.cycle</code> and enumerable objects are very cool and useful parts of ruby!</p>
-      <p class='body-copy'><a href="http://www.globalnerdy.com/2008/07/06/enumerating-enumerable-enumerablecycle/"><b>Further Reading on <code>.cycle</code></b></a></p>
+      <p class='body-copy'><a target="_blank" href="http://www.globalnerdy.com/2008/07/06/enumerating-enumerable-enumerablecycle/"><b>Further Reading on <code>.cycle</code></b></a></p>
     </div>
   </div>
   <div id= 'footer-container'>
