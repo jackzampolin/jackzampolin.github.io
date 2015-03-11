@@ -26,7 +26,7 @@
     <div class='content'>
       <p><h1 style='margin-bottom:-25px;'>Arrays and Hashes in Ruby</h1><br><h3 style='margin-bottom:-30px;'>A brief review</h3><br><h4 style='margin-bottom:10px;'>18 Feb 15</h4>
       </p>
-      <p class='body-copy'>During week 3 at DBC we went back and looked at basic ruby syntax.  A part of that was looking at hashes and arrays.  Well arrays more than hashes.  These two parts of ruby syntax are commonly used in many different applications.  We will take these two methods of storing data and look at them one by one.
+      <p class='body-copy'>During week 3 at DBC we went back and looked at basic Ruby syntax.  A part of that was looking at hashes and arrays.  Well arrays more than hashes.  These two parts of Ruby syntax are commonly used in many different applications.  We will take these two methods of storing data and look at them one by one.
       </p>
       <h2>Arrays</h2>
       <div class='code-snippet'>
@@ -56,7 +56,7 @@
           <span class='code-f-1'>[[1.1,2.2,3.3],[1,2,3]].flatten.sort => [1,1.1,2,2.2,3,3.3]</span>
         </pre>
       </div>
-      <p class='body-copy'>The above code snippets show a couple of common array method calls and their results.  The <code>.flatten</code> method takes an array of arrays and removes the interior arrays creating a single array.  We applied it to our <code>array_of_arrays</code> from earlier.  <code>.sort</code> takes the elements of the array and sorts them, either in alphabetical order or numerical order from either <code>a..z</code> or <code>1..100</code>. If you need the array reversed you can apply the <code>.reverse</code> method!  Another useful array method is <code>.length</code>.  This method outputs the length of the array in elements as an integer.  As you can see above we have called this method on our <code>ruby_array</code> yielding <code>7</code>.  The final example shows two methods called directly on an array, not just it's variable.  The <code>.sort</code> method allows you to mix floats and integers, but not strings and fixnums.</p>
+      <p class='body-copy'>The code snippets above show a couple of common array method calls and their results.  The <code>.flatten</code> method takes an array of arrays and removes the interior arrays creating a single array.  We applied it to our <code>array_of_arrays</code> from earlier.  <code>.sort</code> takes the elements of the array and sorts them, either in alphabetical order or numerical order from either <code>a..z</code> or <code>1..100</code>. If you need the array reversed you can apply the <code>.reverse</code> method!  Another useful array method is <code>.length</code>.  This method outputs the length of the array in elements as an integer.  As you can see above, we have called this method on our <code>ruby_array</code> yielding <code>7</code>.  The final example shows two methods called directly on an array, not just it's variable.  The <code>.sort</code> method allows you to mix floats and integers, but not strings and fixnums.</p>
       <h2>Hashes</h2>
       <div class='code-snippet'>
         <pre class='pre-code-snippet'>
@@ -72,7 +72,7 @@
           <span class='code-f-1'>puts my_info[:current_town] => 'Bozeman'</span>
         </pre>
       </div>
-      <p class='body-copy'>Above is shown the basic syntax for hashes in ruby.  The first line shows the literal notation for initalizing a new hash.  <code>my_info</code> shows an example hash.  As you can see the individual elements in the hash are key-value pairs.  So the <code>:first_name</code> refers to the value <code>'Jack'</code>.  Data is extracted from hashes by naming the key.  You can see this at work in the 3rd line of the example.  If you want to add a key-value pair to an existing hash the notation is shown in the fourth line.  Hashes, like arrays, have methods to manipulate and view data within them.  Hashes are mainly used in ruby to create and hold classes.  But that topic is slightly beyond the remit of this post, but I have a feeling that we will cover classes in a later post.  Stay tuned.</p>
+      <p class='body-copy'>Shown above is the basic syntax for hashes in Ruby.  The first line shows the literal notation for initializing a new hash.  <code>my_info</code> shows an example hash.  As you can see, the individual elements in the hash are key-value pairs.  So, the <code>:first_name</code> refers to the value <code>'Jack'</code>.  Data is extracted from hashes by naming the key.  You can see this at work in the 3rd line of the example.  If you want to add a key-value pair to an existing hash the notation is shown in the fourth line.  Hashes, like arrays, have methods to manipulate and view data within them.  Hashes are mainly used in Ruby to create and hold classes.  But that topic is slightly beyond the remit of this post, but I have a feeling that we will cover classes in a later post.  Stay tuned.</p>
     </div>
   </div>
   <div id= 'footer-container'>
