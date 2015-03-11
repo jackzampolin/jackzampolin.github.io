@@ -157,3 +157,8 @@ p.body-copy a:visited {
 p.body-copy a:hover {
   color: blue;
 }
+
+blockquote {
+  line-height: 125%;
+  font-size: 18px;
+}
