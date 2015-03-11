@@ -25,15 +25,40 @@
     </div>
     <div class='content'>
       <p><h1 style='margin-bottom:-25px;'>Classes and Modules in Ruby</h1><br><h3 style='margin-bottom:-30px;'>The hows and whys</h3><br><h4 style='margin-bottom:10px;'>11 Mar 15</h4></p>
-      <p class='body-copy'>This week at DBC we continued to look at classes in ruby.  </p>
+      <p class='body-copy'>This week at DBC we continued to look at <code>Class</code>es in ruby.  One of our textbooks is <a target='_blank' href="http://www.manning.com/black2/">The Well Grounded Rubyist</a> and while reading through the <code>Class</code> chapter I noticed a number of references to how similar <code>Module</code>s are.  Learning that took me through the next chapter, conveniently all about the topic.  <code>Module</code>s are much like <a target='_blank' href="http://jackzampolin.github.io/blog/tech-blog/t5-ruby-classes.html"><code>Class</code>es</a> in that they have instance methods.  This is where the similarities end.  <code>Class</code>es can be used to store data while <code>Module</code>s can only store methods.  <code>Module</code>s must be <code>include</code>d before they can be used.  Below is some basic syntax to set up a <code>Module</code> and use one of its instance methods.</p>
       <div class='code-snippet'>
         <pre class='pre-code-snippet'>
-          <span class='code-f-1'>class Student</span>
-          <span class='code-f-1'>  attr_accessor :name</span>
-          <span class='code-f-1'>tom = Student.new( "Thomas Hardy" )</span>
+          <span class='code-f-1'>module Cryptonomicon</span>
+          <span class='code-f-1'>  def bobby_shaftoe</span>
+          <span class='code-f-1'>    p "I see you and yours have displayed adaptability."</span>
+          <span class='code-f-1'>  end</span>
+          <span class='code-f-1'>end</span>
+          <span class='code-f-1'> </span>
+          <span class='code-f-1'>class Manila</span>
+          <span class='code-f-1'>  include Cryptonomicon</span>
+          <span class='code-f-1'>end</span>
+          <span class='code-f-1'> </span>
+          <span class='code-f-1'>dm_shaftoe = Cryptonomicon.new</span>
+          <span class='code-f-1'>dm_shaftoe.bobby_shaftoe => "I see you and yours have displayed adaptability."</span>
         </pre>
       </div>
-      <p class='body-copy'>FOO</p>
+      <p class='body-copy'>A major difference between <code>Module</code>s and <code>Class</code>es is that <code>Module</code>s do not have instances.  <code>calculus = Math.new</code> results in a <code>NoMethodError</code>.  To be used <code>Module</code>s must be <code>include</code>d, as shown in the above example, in the class or program that plans to use them.  <code>Module</code>s can store <code>Class</code>es defined within them however.  </p>
+      <div class='code-snippet'>
+        <pre class='pre-code-snippet'>
+          <span class='code-f-1'>module Neuromancer</span>
+          <span class='code-f-1'>  class Sprawl</span>
+          <span class='code-f-1'>    def bama</span>
+          <span class='code-f-1'>      p "Boston-Atlanta Metropolitan Axis"</span>
+          <span class='code-f-1'>    end</span>
+          <span class='code-f-1'>  end</span>
+          <span class='code-f-1'>end</span>
+          <span class='code-f-1'> </span>
+          <span class='code-f-1'>molly_millions = Neuromancer::Sprawl.new</span>
+          <span class='code-f-1'>molly_millions.bama => "Boston-Atlanta Metropolitan Axis"</span>
+        </pre>
+      </div>
+      <p class='body-copy'>This is just some of the basic syntax for <code>Module</code>s.  There are many more tricks to be learned.  Once common module is <code>Math</code>.  It contains a number of trigonometric operators and constants for pi and e.  The full list of <code>Module</code>s included in Ruby, as well as all of the methods for the <code>Module</code> class, are listed <a target='_blank' href="http://ruby-doc.org/core-2.2.0/Module.html">here</a>.</p>
+      <p class='body-copy'></p>
     </div>
   </div>
   <div id= 'footer-container'>
