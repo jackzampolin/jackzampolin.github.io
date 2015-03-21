@@ -1,0 +1,67 @@
+<!Doctype HTML>
+
+<head>
+  <title>JavaScript Objects and Constructors</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id='header-container'>
+    <div id='header'>
+      <ul>
+        <li><a href="../../blog.html">Blog</a></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../portfolio.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class='container'>
+    <div class='img-content'>
+      <div class='img'>
+        <a href='../technical-blog.html'><img src="../../assets/inuse/t7-JavaScript.png"></a>
+      </div>
+    </div>
+    <div class='content'>
+      <p><h1 style='margin-bottom:-25px;'>JavaScript Objects and Constructors</h1><br><h3 style='margin-bottom:-30px;'>A foray into .js</h3><br><h4 style='margin-bottom:10px;'>21 Mar 15</h4></p>
+      <p class='body-copy'>For the last couple of weeks we looked extensively at <a target='_blank' href="http://jackzampolin.github.io/blog/tech-blog/t5-ruby-classes.html">Classes in Ruby</a>.  This week we changed things up and started looking into JavaScript syntax.  It turns out there are constructs in JS that are closely analogous to Hashes and Classes in Ruby.  JS calls these <code>Objects</code> and Object Constructors.</p>
+      <div class='code-snippet'>
+        <pre class='pre-code-snippet'>
+          <span class='code-f-1'>var object = {};</span>
+          <span class='code-f-1'>object.name = "Winston Churchill";</span>
+          <span class='code-f-1'>object['age'] = 140;</span>
+          <span class='code-f-1'>console.log(object); => { name: 'Winston Churchill', age: 140 }</span>
+          <span class='code-f-1'>object.offices = ["First Lord of the Admiralty", "Prime Minister"];</span>
+          <span class='code-f-1'>object.finestHour = function () { console.log("This was their finest hour.") }</span>
+          <span class='code-f-1'>object.finestHour(); => <a target='_blank' href="https://www.youtube.com/watch?v=G4BVzYGeF0M">"This was their finest hour."</a></span>
+        </pre>
+      </div>
+      <p class='body-copy'>Above is a sampling of the things you can do with a JS object.  Line one illustrates Object Literal notation.  Note that it is strikingly similar to initializing a hash in Ruby.  Lines two and three show two different methods of adding data to new properties in the object.  Line two is similar to the 'getter' and 'setter' functions provided by the <code>attr_accessor</code> in ruby classes, while line three is similar to adding a new key/value pair to a hash in ruby.  JS objects can also be used to store arrays, other objects, or ( shown in line six ) functions.  These functions are similar to instance methods in ruby.  But say you need to create more than one object.  Like a bunch of objects with similar properties.  In ruby you would use classes but in JS you use Object constructors.</p>
+      <div class='code-snippet'>
+        <pre class='pre-code-snippet'>
+          <span class='code-f-1'>function leader (name, age, offices, speech) {</span>
+          <span class='code-f-1'>  this.name = name;</span>
+          <span class='code-f-1'>  this.age = age;</span>
+          <span class='code-f-1'>  this.offices = offices;</span>
+          <span class='code-f-1'>  this.speech = function () { console.log(speech) } }</span>
+          <span class='code-f-1'>var jfk = new leader ("John F Kennedy", 98, ['POTUS'], "Ich bin ein Berliner")</span>
+          <span class='code-f-1'>jfk.speech(); => <a target='_blank' href="https://www.youtube.com/watch?v=56V6r2dpYH8">"Ich bin ein Berliner"</a></span>
+        </pre>
+      </div>
+      <p class='body-copy'>Even the spacing in the Object constructor function above shows the similarity between Ruby and JS.  However where the two languages do differ is in the ability to access and change the data in objects from outside them.  JS clearly makes this quite easy, while Ruby does a bit more to protect the stored data from outside encroachment.  Unless you use the <code>attr</code> family of functions in Ruby there is not a great way to change or access data stored in instance variables with in Class objects.  This is by design.  Ruby also provides the <code>#private</code> method to further firewall methods and data stored in classes.  This is just the briefest overview of the differences between these aspects of the two languages.  Further information can be found <a target='_blank' href="http://stantona.github.io/blog/2012/12/12/a-tale-of-two-object-models-javascript-and-ruby/">here</a> and <a target='_blank' href="http://stantona.github.io/blog/2012/12/20/a-tale-of-two-object-models-javascript-and-ruby-part-2/">here</a>.  Also W3Schools has some great documentation on JS constructor functions <a target='_blank' href="http://www.w3schools.com/js/js_object_prototypes.asp">here</a>.</p>
+    </div>
+  </div>
+  <div id= 'footer-container'>
+    <div id='footer'>
+      <ul id="floating-social-icons">
+        <li><a  href="https://github.com/jackzampolin"><img src="../../assets/social/github-icon-01.png" alt="Github"></a></li>
+        <li><a href="https://www.linkedin.com/pub/jack-zampolin/64/b71/b64"><img src="../../assets/social/linkedin-icon-05.png" alt="LinkedIn"></a></li>
+        <li><a href="mailto:jack.zampolin@gmail.com"><img src="../../assets/social/email-icon-02.png" alt="Gmail"> </a></li>
+        <li><a href="https://plus.google.com/+JackZampolin"><img src="../../assets/social/gplus-icon-06.png" alt="Google Plus"></a></li>
+        <li><a href="https://twitter.com/@jack_zampolin"><img src="../../assets/social/twitter-icon-04.png" alt="Twitter"></a></li>
+        <li><a href="https://www.facebook.com/jack.zampolin" rel="external"><img src="../../assets/social/facebook-icon-03.png" alt="Facebook"></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
