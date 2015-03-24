@@ -1,0 +1,128 @@
+<!Doctype HTML>
+<head>
+  <title>Git Cheatsheet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id='header-container'>
+    <div id='header'>
+      <ul>
+        <li><a href="../../blog.html">Blog</a></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../portfolio.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class='container'>
+    <div class='content'>
+      <div class='workflow-box-l'>
+        <p class='body-copy'>Fetch and Merge Changes</p>
+        <p><code>git fetch [alias]</code></p>
+        <p><code>git merge [branch]</code></p>
+        <p><code>git pull [remote]</code></p>
+        <p class='body-copy'>Will synchronize your current branch with a remote repo pulling down any data you do not have locally.  Either fetch then merge to help resolve conflicts or pull if no conflicts exist.</p>
+      </div>
+      <div class='workflow-box-r'>
+        <p class='body-copy'>Set up Upstream</p>
+        <code>git remote add [name] [url]</code>
+        <p class='body-copy'>If you want to share a locally created repo, or you want to take contributions from someone else's repo its best to add that repo as a remote.  Works similarly to inheritance in classes.</p>
+      </div>
+      <div class='workflow-box-l'>
+        <p class='body-copy'>Clone</p>
+        <code>git clone [url]</code>
+        <p class='body-copy'>This command copies a git repository so that you can add to it easily.</p>
+      </div>
+      <div class='workflow-box-r'>
+        <p class='body-copy'>Add and Commit</p>
+        <p><code>git status</code></p>
+        <p><code>git add [path]</code></p>
+        <p><code>git commit -m 'commit message'</code></p>
+        <p><code>git commit -am 'commit message'</code></p>
+        <p class='body-copy'>Git status shows the changes that you have made to the flies in the current repo.  The git add command stages the files to be committed.  The add command is most commonly called as <code>git add .</code> to add all files in the current directory.  The git commit command updates the current branch to include all the changes.  The -am flag on the commit adds and commits at the same time.</p>
+      </div>
+      <div class='workflow-box-l'>
+        <p class='body-copy'>Checkout</p>
+        <p><code>git checkout -- [path]</code></p>
+        <p><code>git co -- [path]</code></p>
+        <p><code>git checkout [branch]</code></p>
+        <p><code>git co [branch]</code></p>
+        <p class='body-copy'>Switch to a new branch or drop changes before staging</p>
+      </div>
+      <div class='workflow-box-r'>
+        <p class='body-copy'>Branching</p>
+        <p><code>git branch [branch] => new branch</code></p>
+        <p><code>git branch -v => prints last commit on each branch</code></p>
+        <p><code>git branch -d [branch] => deletes branch</code></p>
+        <p><code>git branch => lists all branches</code></p>
+        <p class='body-copy'>List, create, and manage different working branches.</p>
+      </div>
+      <div class='workflow-box-l'>
+        <p class='body-copy'>Initialize</p>
+        <p><code>git init</code></p>
+        <p class='body-copy'>Use this command to set up a new repository in the current directory.  This adds a .git file to the current directory that tracks all changes and the repo is automatically named after the folder it is created in.</p>
+      </div>
+    </div>
+  </div>
+  <div id= 'footer-container'>
+    <div id='footer'>
+      <ul id="floating-social-icons">
+        <li><a href="https://github.com/jackzampolin"><img src="assets/social/github-icon-01.png" alt="Github"></a></li>
+        <li><a href="https://www.linkedin.com/pub/jack-zampolin/64/b71/b64"><img src="assets/social/linkedin-icon-05.png" alt="LinkedIn"></a></li>
+        <li><a href="mailto:jack.zampolin@gmail.com"><img src="assets/social/email-icon-02.png" alt="Gmail"> </a></li>
+        <li><a href="https://plus.google.com/+JackZampolin"><img src="assets/social/gplus-icon-06.png" alt="Google Plus"></a></li>
+        <li><a href="https://twitter.com/@jack_zampolin"><img src="assets/social/twitter-icon-04.png" alt="Twitter"></a></li>
+        <li><a href="https://www.facebook.com/jack.zampolin" rel="external"><img src="assets/social/facebook-icon-03.png" alt="Facebook"></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+<!--
+.body-copy {
+  line-height: 150%;
+  font-size: 18px;
+}
+
+
+body {
+  font-family: 'Questrial', sans-serif;
+  width: 100%;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-top: -50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content {
+  width: 95%;
+  max-width: 700px;
+  margin: 50px auto;
+}
+
+
+.workflow-box-l {
+  float: left;
+  max-width: 46%;
+  width: auto;
+  margin: 1em auto;
+  border: 3px solid black;
+  padding: .2em;
+}
+
+.workflow-box-r {
+  float: right;
+  max-width: 46%;
+  width: auto;
+  margin: 1em auto;
+  border: 3px solid black;
+  padding: .2em;
+ -->

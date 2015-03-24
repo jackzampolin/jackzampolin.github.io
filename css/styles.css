@@ -55,8 +55,28 @@
   font-weight: bold;
 }
 
-.cod-f-2 {
+.code-f-2 {
   background-color: #fff0f0
+}
+
+.workflow-box-l {
+  float: left;
+  max-width: 45%;
+  width: auto;
+  margin: 1em auto;
+  border: 3px solid black;
+  padding: .2em;
+  clear: left;
+}
+
+.workflow-box-r {
+  float: right;
+  max-width: 45%;
+  width: auto;
+  margin: 1em auto;
+  border: 3px solid black;
+  padding: .2em;
+  clear: right;
 }
 
 /* IDs */
